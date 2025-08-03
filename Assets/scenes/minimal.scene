@@ -524,10 +524,23 @@
           "ZNear": 10
         },
         {
+          "__type": "Sandbox.ChromaticAberration",
+          "__guid": "108272ce-0ea8-4607-88a8-631518505c3d",
+          "__enabled": true,
+          "Offset": "4,6,0",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Scale": 0
+        },
+        {
           "__type": "GlitchPostProcess",
           "__guid": "976bc856-656b-4111-bb93-92ff4893b810",
           "__enabled": true,
-          "EffectStrength": 0,
+          "EffectRate": 0,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
