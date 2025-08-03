@@ -18,8 +18,6 @@ public sealed class GlitchPostProcess : PostProcess, Component.ExecuteInEditor
 	protected override void UpdateCommandList()
 	{
 		ChromAbb = GameObject.GetComponentInChildren<ChromaticAberration>();
-
-		Assert.NotNull(ChromAbb);
 		
 		if(Input.Pressed("TestGlitch"))
 		{
@@ -31,7 +29,10 @@ public sealed class GlitchPostProcess : PostProcess, Component.ExecuteInEditor
 		{
 			float EffectStrength = GlitchTimer / GlitchDuration;
 
-			ChromAbb.Scale = EffectStrength;
+			if ( ChromAbb != null )
+			{
+				ChromAbb.Scale = EffectStrength;
+			}
 
 			CommandList.Attributes.Set( "EffectStrength", EffectStrength );
 
